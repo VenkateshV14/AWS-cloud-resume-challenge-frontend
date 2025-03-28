@@ -1,0 +1,24 @@
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+
+
+# Ignore AWS deployment files
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore deployment ZIP files (if you're zipping frontend assets manually)
+*.zip
+
+# Ignore environment and credentials files (never store AWS credentials here!)
+.env
+*.pem
+aws-credentials.json
