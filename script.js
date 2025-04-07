@@ -2,7 +2,7 @@ console.log("Welcome to Venkatesh's AWS Cloud Resume Challenge!");
 
 // Function to fetch and show visitor count
 async function getVisitorCount() {
-    const apiUrl = "https://x99v98x8s9.execute-api.us-east-1.amazonaws.com/visitorCounter";
+    const apiUrl = "https://9l2tv5xuna.execute-api.us-east-1.amazonaws.com/count";
 
     try {
         const response = await fetch(apiUrl);
