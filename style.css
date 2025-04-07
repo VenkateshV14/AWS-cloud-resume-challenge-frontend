@@ -65,6 +65,21 @@ header {
     word-break: break-word;
 }
 
+.skills-table {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px 20px;
+    background: #f1f6fc;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.skills-table div {
+    padding: 5px 0;
+}
+
+
 .skills ul,
 .languages ul {
     list-style: none;
