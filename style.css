@@ -1,128 +1,148 @@
-/* styles.css */
+/* style.css */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
+    background: #f2f4f7;
+    color: #333;
+    padding: 20px;
 }
 
+/* Container */
 .container {
-    max-width: 900px;
-    margin: 30px auto;
+    max-width: 960px;
+    margin: auto;
     background: #fff;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    margin-bottom: 5px;
-    font-size: 2em;
-    color: #0a3d62;
-}
-
-h2 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #2c3e50;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-}
-
-h3 {
-    color: #0073e6;
-    margin-bottom: 5px;
-}
-
-header {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #eee;
-}
-
-.profile-img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-    display: block;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.tagline {
-    font-style: italic;
-    color: #555;
-}
-
-.contact p,
-.contact a {
-    margin: 4px 0;
-    color: #0073e6;
-    text-decoration: none;
-    word-break: break-word;
-}
-
-.skills-table {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10px 20px;
-    background: #f1f6fc;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.skills-table div {
-    padding: 5px 0;
-}
-
-
-.skills ul,
-.languages ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Headers */
+header h1 {
+    font-size: 2rem;
+    color: #1e90ff;
+    margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
 }
 
-.skills ul li,
-.languages ul li {
-    background-color: #0073e6;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.certifications ul {
-    padding-left: 20px;
-    list-style-type: disc;
+/* Links */
+a {
+    color: #1e90ff;
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
 section {
-    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
-p {
-    margin: 8px 0;
+/* Skills Table */
+.skills-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    margin-top: 10px;
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 15px;
+.skills-table .key {
+    font-weight: bold;
+    color: #555;
+}
+
+.skills-table .value {
+    float: right;
+    color: #1e90ff;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: #f9fafc;
+    padding: 15px 20px;
+    border-left: 5px solid #1e90ff;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.card:hover {
+    background: #eef3f9;
+}
+
+/* Certification List */
+.cert-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cert-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Languages */
+.languages ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-top: 10px;
+    padding-left: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .skills-table {
+        grid-template-columns: 1fr;
     }
 
-    h1 {
-        font-size: 1.5em;
-    }
-
-    .skills ul,
-    .languages ul {
+    .card-container {
         flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
     }
 }
