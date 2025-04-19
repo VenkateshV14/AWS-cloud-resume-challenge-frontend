@@ -99,6 +99,22 @@ section {
     background: #eef3f9;
 }
 
+/* Card Titles with GitHub Link */
+.card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.card h3 a {
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
 /* Certification List */
 .cert-list {
     list-style: none;
@@ -144,5 +160,10 @@ footer {
 
     h2 {
         font-size: 1.2rem;
+    }
+
+    .card h3 {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
